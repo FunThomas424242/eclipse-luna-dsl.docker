@@ -30,12 +30,13 @@ USER developer
 ENV HOME /home/developer 
 WORKDIR /home/developer
 
-ADD import.pp install.pp /home/developer/
+ADD import.pp install.pp plugins.pp /home/developer/
 
 # install the full configuration via puppet
 RUN  \
   sudo puppet apply import.pp && \
-  sudo puppet apply install.pp
+  sudo puppet apply install.pp && \
+  sudo puppet apply plugins.pp 
 
 
 
