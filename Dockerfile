@@ -8,31 +8,41 @@ FROM isuper/java-oracle:jdk_8
 # maintainer details
 MAINTAINER Thomas Schubert "funthomas424242@gmail.com"
 
-# create working directory
-RUN mkdir -p /local/git
-WORKDIR /local/git
-
-ADD import.pp install.pp /local/git/
-
 # install the full configuration via puppet
 RUN  \
   export DEBIAN_FRONTEND=noninteractive && \
   apt-get update && \
   apt-get -y upgrade && \
-  apt-get install -y emacs libgtk2.0-0 puppet puppetmaster && \
-  puppet apply import.pp && \
-  puppet apply install.pp
+#  apt-get -y emacs && \
+  apt-get install -y libgtk2.0-0 libswt-gtk-3-java puppet puppetmaster
+
+
+# Replace 1000 with your user / group id 
+RUN export uid=1000 gid=1000 && \
+    mkdir -p /home/developer && \
+    echo "developer:x:${uid}:${gid}:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd && \
+    echo "developer:x:${uid}:" >> /etc/group && \
+    echo "developer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/developer && \
+    chmod 0440 /etc/sudoers.d/developer && \
+    chown ${uid}:${gid} -R /home/developer
+
+USER developer 
+ENV HOME /home/developer 
+WORKDIR /home/developer
+
+ADD import.pp install.pp /home/developer/
+
+# install the full configuration via puppet
+RUN  \
+  sudo puppet apply import.pp && \
+  sudo puppet apply install.pp
+
+
 
 # attach volumes
 # VOLUME /volume/git
 
-# ADD install.pp /local/git/
-
-RUN sudo apt-get update
-RUN sudo apt-get install libswt-gtk-3-java -y
-
-
-# run terminal
+# run terminal or eclipse
 #CMD ["/bin/bash"]
-CMD ["/opt/eclipse/eclipse/eclipse" "/bin/bash"]
+CMD /opt/eclipse/eclipse/eclipse
 
