@@ -23,3 +23,7 @@ und soll out of the box eine fertig konfigurierte Eclipse Umgebung starten.
 2. Dann sollen die Projekte darin bearbeitet werden.
 3. Am Tagesende wird die Eclipse geschlossen und damit auch der Container gestoppt.
 4. Am nächsten Tag kann der Container wieder wie oben beschrieben gestartet werden und die Arbeit fortgesetzt werden.
+
+#Quellen
+
+* http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/
