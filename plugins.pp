@@ -1,10 +1,10 @@
-eclipse::plugin { 'm2e':
-  method     => 'p2_director',
-  iu         => 'org.eclipse.m2e.feature.feature.group',
-  repository => 'http://download.eclipse.org/releases/luna',
-  ensure     =>  present,
-  require    => Class['eclipse'],
-}
+# eclipse::plugin { 'm2e':
+#  method     => 'p2_director',
+#  iu         => 'org.eclipse.m2e.feature.feature.group',
+#  repository => 'http://download.eclipse.org/releases/luna',
+#  ensure     =>  present,
+#  require    => Class['eclipse'],
+#}
 
 
 # eclipse::plugin { 'emftext':
@@ -18,8 +18,8 @@ eclipse::plugin { 'm2e':
 
 
 node default {
-        include archive::prerequisites
+#        include archive::prerequisites
 #     	include wget
-	include eclipse 
-#	notice('Well done!')
+#	include eclipse 
+	notice('Well done!')
 }

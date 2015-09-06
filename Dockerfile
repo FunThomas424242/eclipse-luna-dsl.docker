@@ -14,7 +14,7 @@ RUN  \
   apt-get update && \
   apt-get -y upgrade && \
 #  apt-get -y emacs && \
-  apt-get install -y libgtk2.0-0 libswt-gtk-3-java puppet puppetmaster
+  apt-get install -y libgtk2.0-0 libswt-gtk-3-java git maven puppet puppetmaster
 
 
 # Replace 1000 with your user / group id 
