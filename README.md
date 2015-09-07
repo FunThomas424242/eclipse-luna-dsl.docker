@@ -27,3 +27,4 @@ und soll out of the box eine fertig konfigurierte Eclipse Umgebung starten.
 #Quellen
 
 * http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/
+* http://www.cheatography.com/funthomas424242/cheat-sheets/docker/ (Docker Cheat Sheet)
