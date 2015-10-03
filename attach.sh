@@ -1,4 +1,4 @@
 #!/bin/bash
-docker exec -it eclipse-luna-dsl bash
+docker exec -it git-maven-eclipse bash
 
 

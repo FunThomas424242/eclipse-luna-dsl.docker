@@ -1,2 +1,2 @@
 #!/bin/bash
-docker start eclipse-luna-dsl
+docker start git-maven-eclipse
