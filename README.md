@@ -13,7 +13,7 @@ Ein Projekt zum Erstellen eines Docker Containers mit folgenden installierten Ko
 
 Der Container soll aufgerufen werden über:
 
-  docker run -it -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix containerID:version
+  docker run -it -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix git-maven-eclipse.docker
 
 und soll out of the box eine fertig konfigurierte Eclipse Umgebung starten.
 
