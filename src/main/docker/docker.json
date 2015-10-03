@@ -24,15 +24,15 @@ Falls das auf dieser Platform hier möglich ist, werde ich also einen manuell ko
 Sorry mehr wird es initial nicht werden. Evtl. geht in einer Folgeversion mehr.
 
 ",
-    "repo_url":"https://registry.hub.docker.com/u/funthomas424242/git-maven-eclipse/",
+    "repo_url":"https://registry.hub.docker.com/u/funthomas424242/git-maven-eclipse.docker/",
     "owner":"funthomas424242",
     "is_official":true,
     "is_private":false,
-    "name":"git-maven-eclipse",
+    "name":"git-maven-eclipse.docker",
     "namespace":"funthomas424242",
     "star_count":1,
     "comment_count":1,
     "dockerfile":"Dockerfile",
-    "repo_name":"funthomas424242/git-maven-eclipse"
+    "repo_name":"funthomas424242/git-maven-eclipse.docker"
   }
 }

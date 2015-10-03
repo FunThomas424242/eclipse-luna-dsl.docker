@@ -30,7 +30,7 @@ USER developer
 ENV HOME /home/developer 
 WORKDIR /home/developer
 
-ADD ../resources/import.pp ../resources/git.pp ../resources/maven.pp ../resources/eclipse.pp ../resources/plugins.pp /home/developer/
+ADD import.pp git.pp maven.pp eclipse.pp plugins.pp /home/developer/
 
 # install the full configuration via puppet
 RUN  \

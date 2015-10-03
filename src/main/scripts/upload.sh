@@ -1,4 +1,4 @@
 #!/bin/sh
 
 docker login
-docker push funthomas424242/git-maven-eclipse
+docker push funthomas424242/git-maven-eclipse.docker
