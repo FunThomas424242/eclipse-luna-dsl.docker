@@ -1,4 +1,4 @@
-## eclipse-luna-dsl.docker 
+## git-maven-eclipse.docker 
 
 # Ziele
 
@@ -9,7 +9,7 @@ Ein Projekt zum Erstellen eines Docker Containers mit folgenden installierten Ko
 * java 8
 * maven
 * eclipse luna
-* eclipse dsl plugins
+* eclipse  plugins
 
 Der Container soll aufgerufen werden über:
 
