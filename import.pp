@@ -15,13 +15,13 @@ exec { "puppetlabs-concat-modul":
 
 # counsyl-sys
 exec { "counsyl-sys-modul":
-    command => "puppet module install --force counsyl-sys",
+    command => "sudo puppet module install --force counsyl-sys",
 }
 
 
 # gini-archive
 exec { "gini-archive-modul":
-    command => "puppet module install --force gini-archive",
+    command => "sudo puppet module install --force gini-archive",
 }
 
 #
@@ -30,22 +30,22 @@ exec { "gini-archive-modul":
 
 # stdlib
 exec { "stdlib-modul":
-    command => "puppet module install --force puppetlabs-stdlib",
+    command => "sudo puppet module install --force puppetlabs-stdlib",
 }
 
 # apt
 exec { "apt-modul":
-    command => "puppet module install --force puppetlabs-apt",
+    command => "sudo puppet module install --force puppetlabs-apt",
 }
 
 # vcsrepo 
 exec { "vcsrepo-modul":
-    command => "puppet module install --force puppetlabs-vcsrepo",
+    command => "sudo puppet module install --force puppetlabs-vcsrepo",
 }
 
 # git 
 exec { "git-modul":
-    command => "puppet module install --force puppetlabs-git",
+    command => "sudo puppet module install --force puppetlabs-git",
 }
 
 
@@ -56,17 +56,17 @@ exec { "git-modul":
 
 # wget 
 exec { "masestrodev-wget-modul":
-    command => "puppet module install --force maestrodev-wget",
+    command => "sudo puppet module install --force maestrodev-wget",
 }
 
 # maven 
 exec { "maven-modul":
-    command => "puppet module install --force maestrodev-maven",
+    command => "sudo puppet module install --force maestrodev-maven",
 }
 
 # ant 
 exec { "ant-modul":
-    command => "puppet module install --force maestrodev-ant",
+    command => "sudo puppet module install --force maestrodev-ant",
 }
 
 
@@ -76,6 +76,6 @@ exec { "ant-modul":
 
 # eclipse 
 exec { "eclipse-modul":
-    command => "puppet module install --force mjanser-eclipse",
+    command => "sudo puppet module install --force mjanser-eclipse",
 }
 
