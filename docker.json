@@ -1,0 +1,38 @@
+{
+  "push_data":{
+    "pusher":"funthomas424242"
+  },
+  "repository":{
+    "status":"Active",
+    "description":"Docker Image zur Bereitstellung einer eclipse IDE mit git, maven und eclipse+plugins.",
+    "is_trusted":false,
+    "full_description":"
+Das hehre Ziel dieses Containers ist es eine Entwicklungsumgebung bereitzustellen bestehend aus:
+
+    java8
+    git
+    maven 3
+    eclipse luna
+    emftext plugin
+    acceleo plugin
+    m2e plugin
+
+Leider scheint dies nicht vollautomatisch möglich zu sein, da es mir bislang nicht gelungen ist puppet beizubringen die eclipse automatisch zu konfigurieren und entsprechende plugins zu installieren. Achja - bei der Installation habe ich mich für puppet im Dockerfile entschieden, weil es mit shell Skripten noch komplizierter wird.
+
+Falls das auf dieser Platform hier möglich ist, werde ich also einen manuell konfigurierten Container auf Ubuntu Basis hochladen. Falls nicht, wird es ein automatischer den das Dockerfile bis zur Installation von java, git, maven und eclipse bringt.
+
+Sorry mehr wird es initial nicht werden. Evtl. geht in einer Folgeversion mehr.
+
+",
+    "repo_url":"https://registry.hub.docker.com/u/funthomas424242/git-maven-eclipse/",
+    "owner":"funthomas424242",
+    "is_official":true,
+    "is_private":false,
+    "name":"git-maven-eclipse",
+    "namespace":"funthomas424242",
+    "star_count":1,
+    "comment_count":1,
+    "dockerfile":"Dockerfile",
+    "repo_name":"funthomas424242/git-maven-eclipse"
+  }
+}
