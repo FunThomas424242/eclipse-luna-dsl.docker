@@ -14,7 +14,7 @@ RUN  \
   apt-get update && \
   apt-get -y upgrade && \
 #  apt-get -y emacs && \
-  apt-get install -y libgtk2.0-0 libswt-gtk-3-java git puppet puppetmaster
+  apt-get install -y libgtk2.0-0 libswt-gtk-3-java puppet puppetmaster
 
 
 # Replace 1000 with your user / group id 
@@ -30,13 +30,14 @@ USER developer
 ENV HOME /home/developer 
 WORKDIR /home/developer
 
-ADD import.pp install.pp maven.pp plugins.pp /home/developer/
+ADD import.pp git.pp maven.pp eclipse.pp plugins.pp /home/developer/
 
 # install the full configuration via puppet
 RUN  \
   sudo puppet apply import.pp && \
+  sudo puppet apply git.pp && \
   sudo puppet apply maven.pp && \
-  sudo puppet apply install.pp && \
+  sudo puppet apply eclipse.pp && \
   sudo puppet apply plugins.pp 
 
 
