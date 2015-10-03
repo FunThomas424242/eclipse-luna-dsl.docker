@@ -10,7 +10,7 @@ file { "/tmp/facts.yaml":
 
 # puppetlabs-concat
 exec { "puppetlabs-concat-modul":
-    command => "puppet module install --force puppetlabs-concat",
+    command => "sudo puppet module install --force puppetlabs-concat",
 }
 
 # counsyl-sys
@@ -43,10 +43,7 @@ exec { "vcsrepo-modul":
     command => "sudo puppet module install --force puppetlabs-vcsrepo",
 }
 
-# git 
-exec { "git-modul":
-    command => "sudo puppet module install --force puppetlabs-git",
-}
+
 
 
 #
@@ -59,6 +56,11 @@ exec { "masestrodev-wget-modul":
     command => "sudo puppet module install --force maestrodev-wget",
 }
 
+# git 
+exec { "git-modul":
+    command => "sudo puppet module install --force maestrodev-git",
+}
+
 # maven 
 exec { "maven-modul":
     command => "sudo puppet module install --force maestrodev-maven",
@@ -68,6 +70,8 @@ exec { "maven-modul":
 exec { "ant-modul":
     command => "sudo puppet module install --force maestrodev-ant",
 }
+
+
 
 
 #
